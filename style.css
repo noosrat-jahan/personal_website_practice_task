@@ -3,8 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-nav{
-    
+nav{    
     height: 50px;
     position: absolute;
     top: 0;
@@ -24,28 +23,36 @@ nav li{
 nav a{
     text-decoration: none;
     font-family: "Roboto", sans-serif;
-    font-size: 0.8rem;
-    color: black;
-    font-weight: 500;
+    font-size: 1rem;
+    color: rgb(255, 131, 103);
+    font-weight: 700;
 }
 
 
 .about_me_section{
     width: 80%;
-    border: 1px solid saddlebrown;
+    /* border: 1px solid saddlebrown; */
     margin-top: 100px;
-    margin-left: 100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    column-gap: 20px;
+    margin-left: 120px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-template-rows: repeat(2, 1fr); */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* column-gap: 20px; */
 }
 
-.about_me_section img{
-    width: 70%;
-    height: 100%;
+
+.profile_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.profile_container img{
+    width: 30%;
+    height: 50%;
 }
 
 #about_span{
@@ -84,16 +91,21 @@ nav a{
     align-items: center;
     justify-content: center;
     gap: 40px;
+   
 }
 
 .project_container div{
+    width: 100%;
+    height: 100%;
     box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.07);
     padding: 20px;
+   
 }
 
+
 .latest_working_project img{
-    width: 345px;
-    height: 215px;
+    width: 100%;
+    height: 100%;
 }
 
 footer{    
@@ -149,10 +161,22 @@ footer h3{
 /* responsive design starts here */
 
 @media screen and (max-width:576px) {
+    nav{
+        right: 100px;
+    }
+
+    nav ul{
+        gap: 30px;
+    }
 
     .about_me_section{
         width: 90%;       
-        margin-left: 20px;
+        margin-left: 25px;
+    }
+
+    .profile_container{
+        flex-direction: column;
+        gap: 30px;
     }
 
     .about_me_section img{
@@ -165,13 +189,19 @@ footer h3{
         flex-direction: column;
     }
 
-
     .footer_content{
         width: 80%;
         height: 10%;
     }
 
     .footer_content h1{
-        font-size: 3rem;
+        font-size: 2rem;
     }
+
+    .primary_btn{
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 8px 20px;
+    }
+    
 }
